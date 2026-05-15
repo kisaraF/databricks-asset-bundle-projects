@@ -1,0 +1,15 @@
+resources:
+  jobs:
+    run_daily_undefined_alert_job:
+      name: "Run Daily Undefined Days Alert Job"
+      tasks:
+        - task_key: "evaluate_undefined_days_alert_task"
+          sql_task:
+            alert:
+              alert_id: "${resources.alerts.undefined_days_alert.id}"
+            warehouse_id: "${var.sql_warehouse_id}"
+
+          schedule:
+            quartz_cron_expression: "0 30 20 * * ?" # Everyday at 20.30
+            timezone_id: "Australia/Sydney"
+

@@ -1,0 +1,16 @@
+variables:
+  catalog:
+    description: "Target catalog for the alert"
+    default: "sandbox_catalog" 
+  
+  schema:
+    description: "Target schema for the alert"
+    default: "default"
+
+  sql_warehouse_id:
+    description: "SQL warehouse to be used on SQL queries and alerts"
+    default: ceb3be95f4dc9e20
+
+#  undefined_sql_alert:
+#    description: "Path of the SQL alert for finding undefined days"
+#    default: ../src/queries/undefined_days_alert.sql
