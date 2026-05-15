@@ -1,0 +1,14 @@
+.databricks/
+build/
+dist/
+__pycache__/
+*.egg-info
+.venv/
+scratch/**
+!scratch/README.md
+**/explorations/**
+**/!explorations/README.md
+.venv/
+citibike_etl/notebooks/01_bronze/sample.py
+other/module_imports.py
+other/test.py
